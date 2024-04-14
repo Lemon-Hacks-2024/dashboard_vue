@@ -1,0 +1,95 @@
+.thead th:not(.min-w) {
+  min-width: 160px;
+}
+
+.thead .name {
+  width: 100%;
+}
+
+.main-row {
+  cursor: pointer;
+}
+
+.second-row:not(.hide) {
+  display: none;
+}
+
+.main-row.active+.second-row {
+  display: table-row;
+}
+
+.main-row.active .arr {
+  transform: rotate(180deg);
+}
+
+.item-border {
+  border-radius: 100px;
+  border: 1px solid #919eab66;
+  padding: 0 8px;
+  display: inline-flex;
+}
+
+td {
+  padding: 12px 16px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 0;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 7px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 7px;
+}
+
+tr {
+  transition: 0.2s;
+}
+
+.main-row:hover,
+.main-row:hover+.second-row {
+  background-color: #f9fafb;
+}
+
+.arr {
+  width: 24px;
+  height: 24px;
+  transition: 0.2s;
+}
+
+.dots {
+  position: relative;
+}
+
+.dots__icon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.th-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.th-icon {
+  min-width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0.5;
+}
+
+.th-icon:hover,
+.th-icon.active {
+  opacity: 1;
+}
+
+.th-icon.reverse.active {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,94 @@
+@import "./fonts.css";
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+body,
+body * {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.link {
+  color: #0088ff;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  transition: 0.2s;
+  position: absolute;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #0088ff;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link.disabled {
+  color: #919eabcc;
+  cursor: not-allowed;
+}
+
+.link.disabled::after {
+  display: none;
+}
+
+
+.v-enter-active {
+  transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-from {
+  opacity: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form__footer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.show {
+  -webkit-animation: showIn 0.4s ease both;
+  animation: showIn 0.4s ease both;
+}
+
+@keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
